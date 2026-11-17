@@ -1,15 +1,20 @@
 
 /* Exercise 9.2 - DOM Family Relations */
 
-var stories = document.getElementById("stories");
+// Select parent element
+var parent = document.getElementById("first");
 
-for (var i = 0; i < stories.childNodes.length; i++) {
-    var node = stories.childNodes[i];
+// Get all child nodes
+var children = parent.childNodes;
 
-    console.log("child " + i + " = " + node +
-        " nodeType=" + node.nodeType);
+// Loop through child nodes
+for (var i = 0; i < children.length; i++) {
+    var node = children[i];
 
-    // Change background of non-text nodes
+    console.log("Child " + i +
+        " - Node Type: " + node.nodeType);
+
+    // Change background of element nodes
     if (node.nodeType === 1) {
         node.style.backgroundColor = "lightblue";
     }
