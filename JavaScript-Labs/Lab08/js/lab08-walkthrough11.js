@@ -18,9 +18,11 @@ countries.push(new Country("Spain", "ES", "Madrid", 46505963));
 countries.push(new Country("United Kingdom", "GB", "London", 62348447));
 
 
+
 /* Exercise 8.11 - Arrays of Objects */
 
-// Create HTML table
+document.write("<h1>Arrays of Objects</h1>");
+
 document.write("<table border='1' cellpadding='10'>");
 
 document.write("<tr>");
@@ -30,7 +32,6 @@ document.write("<th>Capital</th>");
 document.write("<th>Population</th>");
 document.write("</tr>");
 
-// Loop through the array of objects
 for (var i = 0; i < countries.length; i++) {
     document.write("<tr>");
     document.write("<td>" + countries[i].name + "</td>");
@@ -41,4 +42,3 @@ for (var i = 0; i < countries.length; i++) {
 }
 
 document.write("</table>");
-
