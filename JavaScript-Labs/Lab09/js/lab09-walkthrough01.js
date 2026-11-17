@@ -51,4 +51,9 @@ for (var i = 0; i < ps.length; i++) {
 }
 
 // Change background color
+
 document.getElementById("features").style.backgroundColor = "green";
+
+// Hide textarea
+document.getElementById("msgArea").setAttribute("class", "hidden");
+
