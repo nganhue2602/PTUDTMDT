@@ -1,4 +1,4 @@
-
+console.log("Lab 8.10 JS loaded");
 /* Exercise 8.10 - Creating JavaScript Objects */
 
 // Constructor function
