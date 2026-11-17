@@ -55,5 +55,4 @@ for (var i = 0; i < ps.length; i++) {
 document.getElementById("features").style.backgroundColor = "green";
 
 // Hide textarea
-document.getElementById("msgArea").setAttribute("class", "hidden");
-
+document.getElementById("msgArea").style.display = "none";
