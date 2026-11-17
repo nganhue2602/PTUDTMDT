@@ -5,25 +5,23 @@ var btn = document.getElementById("testButton");
 var content = document.getElementById("content");
 var img = document.getElementById("mainImage");
 
-// Click event - Hide / Show
-function simpleHandler(event) {
-    if (btn.innerHTML.trim() === "Hide") {
-        btn.innerHTML = "Show";
-        content.style.display = "none";
-    } else {
-        btn.innerHTML = "Hide";
+// Hide / Show
+btn.addEventListener("click", function() {
+    if (content.style.display === "none") {
         content.style.display = "block";
+        btn.textContent = "Hide";
+    } else {
+        content.style.display = "none";
+        btn.textContent = "Show";
     }
-}
+});
 
-btn.addEventListener("click", simpleHandler);
-
-// Mouseover - gray image
+// Mouseover
 img.addEventListener("mouseover", function() {
     img.style.filter = "grayscale(100%)";
 });
 
-// Mouseout - restore image
+// Mouseout
 img.addEventListener("mouseout", function() {
     img.style.filter = "none";
 });
