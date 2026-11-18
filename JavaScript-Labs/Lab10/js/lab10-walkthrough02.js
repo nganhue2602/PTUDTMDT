@@ -8,7 +8,7 @@ $(function() {
     msg.val("here is some new text");
 
     // Change HTML content
-    $('#first').html("new Title");
+    $('#pageTitle').html("new Title");
 
     // Read an attribute
     $('#msgArea').val(
