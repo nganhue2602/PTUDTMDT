@@ -1,9 +1,9 @@
 
 $(function () {
-    // Create a new DOM element
-    var img = $('<img src="images/art/thumbs/13030.jpg">');
+    var img = $('<img>', {
+        src: 'images/art/thumbs/13030.jpg',
+        alt: 'Artwork'
+    });
 
-    // Insert image after the panel
-    var panel = $('.panel');
-    panel.after(img);
+    $('.panel').after(img);
 });
