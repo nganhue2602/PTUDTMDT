@@ -7,9 +7,9 @@ $(function() {
     $(':password').css('background-color', 'yellow');
 
     // Select every fourth child of the form
-    $('form :nth-child(4n)').css('background-color', 'yellow');
+ //   $('form :nth-child(4n)').css('background-color', 'yellow');
 
     // Select labels containing "word"
-    $('label:contains("word")').css('color', 'black');
+  //  $('label:contains("word")').css('color', 'black');
 
 });
