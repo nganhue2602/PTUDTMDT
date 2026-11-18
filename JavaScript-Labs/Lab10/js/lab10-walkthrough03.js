@@ -8,6 +8,6 @@ $(function() {
     $('form :nth-child(4n)').css('background-color', 'yellow');
 
     // Tạm tắt Contains Selector
-    // $('label:contains("word")').css('color', 'black');
+    $('label:contains("word")').css('color', 'black');
 
 });
