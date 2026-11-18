@@ -1,2 +1,44 @@
-/* put your animation code here */
 
+/* Exercise 10.7 - More jQuery Animation */
+
+$(function () {
+
+    function removePreview() {
+        $(this).removeClass("gray");
+        $("#preview").remove();
+    }
+
+    function movePreview(e) {
+        $("#preview")
+            .css("top", (e.pageY - 10) + "px")
+            .css("left", (e.pageX + 30) + "px");
+    }
+
+    $("figure img")
+        .on("mouseover", function (e) {
+
+            var alt = $(this).attr("alt");
+            var src = $(this).attr("src");
+            var newsrc = src.replace("small", "medium");
+
+            var preview = $('<div id="preview"></div>');
+            var image = $('<img>', {
+                src: newsrc,
+                alt: alt
+            });
+            var caption = $("<p></p>").text(alt);
+
+            preview.append(image);
+            preview.append(caption);
+
+            $("body").append(preview);
+
+            $(this).addClass("gray");
+
+            movePreview(e);
+            $("#preview").fadeIn(1000);
+        })
+        .on("mousemove", movePreview)
+        .on("mouseleave", removePreview);
+
+});
