@@ -5,5 +5,5 @@ $(function () {
         alt: 'Artwork'
     });
 
-   $('.panel').before(img);
+   $('.panel').append(img);
 });
