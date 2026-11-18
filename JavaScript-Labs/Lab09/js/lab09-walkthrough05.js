@@ -9,4 +9,6 @@ function outputBox(num) {
    return box;
 }
 
-/* your code goes here */
+
+var divToGet = document.getElementById("div1");
+alert(divToGet.innerHTML);
