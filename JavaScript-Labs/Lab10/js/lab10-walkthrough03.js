@@ -1,15 +1,13 @@
 
-/* Exercise 10.3 - Advanced Selectors */
-
 $(function() {
 
-    // Select all password fields
-  //  $(':password').css('background-color', 'yellow');
+    // Tạm tắt Password Selector
+    // $(':password').css('background-color', 'yellow');
 
-    // Select every fourth child of the form
- $('form :nth-child(4n)').css('background-color', 'yellow');
+    // Chỉ bật nth-child Selector
+    $('form :nth-child(4n)').css('background-color', 'yellow');
 
-    // Select labels containing "word"
-  //  $('label:contains("word")').css('color', 'black');
+    // Tạm tắt Contains Selector
+    // $('label:contains("word")').css('color', 'black');
 
 });
