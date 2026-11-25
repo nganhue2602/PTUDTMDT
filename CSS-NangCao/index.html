@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS | Nguyễn Thanh Ngân Huệ</title>
+
+    <style>
+        :root {
+            --navy: #24264B;
+            --purple: #7566C9;
+            --lavender: #EEEAFB;
+            --background: #F7F7FC;
+            --text: #34364F;
+            --muted: #77798C;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        header {
+            background: linear-gradient(135deg, #24264B, #7566C9);
+            color: white;
+            padding: 70px 24px;
+            text-align: center;
+        }
+
+        header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.16);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin: 18px 0 10px;
+        }
+
+        header p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: #F0EDFF;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 40px 24px 70px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #EAE7F5;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 24px rgba(36,38,75,0.04);
+        }
+
+        h2 {
+            color: var(--navy);
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .info-item {
+            background: var(--lavender);
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--purple);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .info-item span {
+            display: block;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            padding: 7px 14px;
+            background: var(--lavender);
+            border-radius: 30px;
+            color: #5546A3;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .exercise {
+            display: block;
+            text-decoration: none;
+            background: #FBFAFF;
+            border: 1px solid #E6E1F8;
+            border-radius: 12px;
+            padding: 17px;
+            color: var(--text);
+            transition: transform 0.25s, box-shadow 0.25s,
+                        border-color 0.25s;
+        }
+
+        .exercise:hover {
+            transform: translateY(-5px);
+            border-color: var(--purple);
+            box-shadow: 0 10px 20px rgba(117,102,201,0.12);
+        }
+
+        .exercise small {
+            color: var(--purple);
+            font-weight: 700;
+        }
+
+        .exercise strong {
+            display: block;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .exercise p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            background: var(--purple);
+            color: white;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #5D4EB1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--navy);
+            color: white;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .exercise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            header {
+                padding: 50px 20px;
+            }
+
+            .info-grid,
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <span class="tag">WEB APPLICATION DEVELOPMENT</span>
+    <h1>Advanced CSS</h1>
+    <p>
+        Chapter 7 – CSS Layout, Positioning,
+        Responsive Design & Visual Effects
+    </p>
+</header>
+
+<main class="container">
+
+    <section class="card">
+        <h2>Thông tin sinh viên</h2>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>Họ và tên</strong>
+                <span>Nguyễn Thanh Ngân Huệ</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Mã số sinh viên</strong>
+                <span>31241026910</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Môn học</strong>
+                <span>Phát triển ứng dụng Thương mại điện tử</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Nội dung</strong>
+                <span>Chapter 7 – Advanced CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Giới thiệu bài thực hành</h2>
+
+        <p>
+            Trang web tổng hợp các bài thực hành CSS nâng cao
+            thuộc Chapter 7. Nội dung tập trung vào các kỹ thuật
+            bố cục, định vị phần tử, thiết kế giao diện thích ứng
+            và tạo hiệu ứng tương tác bằng CSS.
+        </p>
+
+        <p>
+            Thông qua 19 bài tập, sinh viên thực hành trực tiếp
+            trên HTML và CSS để quan sát cách trình duyệt
+            xử lý các thuộc tính và xây dựng giao diện website.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Kiến thức thực hành</h2>
+
+        <div class="skills">
+            <span>Document Flow</span>
+            <span>Positioning</span>
+            <span>Z-Index</span>
+            <span>Float & Clear</span>
+            <span>Multi-Column Layout</span>
+            <span>Media Queries</span>
+            <span>Responsive Design</span>
+            <span>Transforms</span>
+            <span>Transitions</span>
+            <span>CSS Filters</span>
+            <span>Animations</span>
+            <span>Bootstrap</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Danh sách bài thực hành</h2>
+        <p>Nhấn vào từng bài để xem kết quả thực hành.</p>
+
+        <div class="exercise-grid" id="exercise-list"></div>
+    </section>
+
+    <section class="card">
+        <h2>Tự đánh giá kết quả học tập</h2>
+
+        <p>
+            Qua quá trình thực hiện các bài tập CSS nâng cao,
+            em đã hiểu rõ hơn cách trình duyệt sắp xếp và
+            hiển thị các phần tử HTML. Các bài thực hành
+            về position, float và clear giúp em nhận biết
+            sự khác biệt giữa luồng tài liệu thông thường
+            và các phương pháp định vị phần tử.
+            Bên cạnh đó, việc xây dựng bố cục nhiều cột
+            và sử dụng Media Queries giúp em hiểu
+            tầm quan trọng của thiết kế responsive.
+            Em cũng được thực hành các hiệu ứng
+            transform, transition, filter và animation
+            để cải thiện trải nghiệm tương tác.
+            Phần Bootstrap giúp em làm quen với hệ thống
+            lưới và các thành phần giao diện có sẵn.
+            Sau bài thực hành, em có thể tự chỉnh sửa
+            và kiểm tra giao diện website tốt hơn.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Mã nguồn GitHub</h2>
+        <p>
+            Toàn bộ mã nguồn bài thực hành được quản lý
+            và lưu trữ trên GitHub.
+        </p>
+
+        <a class="button"
+           href="https://github.com/nganhue2602/PTUDTMDT"
+           target="_blank"
+           rel="noopener noreferrer">
+            Xem GitHub Repository
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    Nguyễn Thanh Ngân Huệ · 31241026910 · Advanced CSS
+</footer>
+
+<script>
+    const exercises = [
+        ["Document Flow", "Thuộc tính display"],
+        ["Relative Positioning", "Định vị tương đối"],
+        ["Absolute Positioning", "Định vị tuyệt đối"],
+        ["Stacking Using Z-Index", "Thứ tự chồng lớp"],
+        ["Floating Elements", "Float trái và phải"],
+        ["Floating in a Container", "Float trong vùng chứa"],
+        ["Floating Multiple Items", "Bố trí nhiều phần tử"],
+        ["Floating and Clearing", "Sử dụng thuộc tính clear"],
+        ["Using Positioning", "Định vị chú thích và overlay"],
+        ["Two-Column Layout", "Bố cục hai cột"],
+        ["Three-Column Layout", "Bố cục ba cột"],
+        ["Media Queries", "Giao diện desktop và mobile"],
+        ["Setting the Viewport", "Viewport và menu responsive"],
+        ["Transforms", "Xoay, nghiêng và thu phóng"],
+        ["Transitions", "Hiệu ứng chuyển màu"],
+        ["More Transitions", "Hiệu ứng hover nâng cao"],
+        ["CSS Filters", "Bộ lọc hình ảnh"],
+        ["Animations", "Chuyển động với keyframes"],
+        ["Using Bootstrap", "Grid và thành phần Bootstrap"]
+    ];
+
+    const list = document.getElementById("exercise-list");
+
+    exercises.forEach((exercise, index) => {
+        const number = index + 1;
+
+        // Exercise 7.13 uses the same HTML as 7.12.
+        const fileNumber = number === 13 ? 12 : number;
+
+        const fileName =
+            "lab07-exercise" +
+            String(fileNumber).padStart(2, "0") +
+            ".html";
+
+        const link = document.createElement("a");
+        link.className = "exercise";
+        link.href = fileName;
+
+        const label = document.createElement("small");
+        label.textContent = "EXERCISE 7." + number;
+
+        const title = document.createElement("strong");
+        title.textContent = exercise[0];
+
+        const description = document.createElement("p");
+        description.textContent = exercise[1];
+
+        link.append(label, title, description);
+        list.appendChild(link);
+    });
+</script>
+
+</body>
+</html>
